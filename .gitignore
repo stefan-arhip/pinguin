@@ -1,0 +1,6 @@
+backup/
+lib/
+_temp/
+*computers.txt
+*.dbg
+*.exe
