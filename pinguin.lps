@@ -4,12 +4,12 @@
     <PathDelim Value="\"/>
     <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="pinguin.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <UsageCount Value="37"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,9 +20,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMain"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="99"/>
-        <CursorPos X="21" Y="87"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="164"/>
+        <CursorPos X="12" Y="193"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -42,14 +42,20 @@
       <Unit4>
         <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\winunits-base\src\activex.pp"/>
         <UnitName Value="ActiveX"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="3284"/>
         <CursorPos X="75" Y="3301"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1804"/>
+        <CursorPos X="15" Y="1821"/>
+        <UsageCount Value="10"/>
+      </Unit5>
     </Units>
-    <JumpHistory Count="3" HistoryIndex="2">
+    <JumpHistory Count="9" HistoryIndex="8">
       <Position1>
         <Filename Value="umain.pas"/>
         <Caret Line="185" Column="31" TopLine="178"/>
@@ -62,6 +68,30 @@
         <Filename Value="umain.pas"/>
         <Caret Line="95" Column="36" TopLine="78"/>
       </Position3>
+      <Position4>
+        <Filename Value="umain.pas"/>
+        <Caret Line="176" Column="25" TopLine="154"/>
+      </Position4>
+      <Position5>
+        <Filename Value="umain.pas"/>
+        <Caret Line="49" Column="3" TopLine="30"/>
+      </Position5>
+      <Position6>
+        <Filename Value="umain.pas"/>
+        <Caret Line="173" Column="14" TopLine="154"/>
+      </Position6>
+      <Position7>
+        <Filename Value="umain.pas"/>
+        <Caret Line="104" Column="8" TopLine="66"/>
+      </Position7>
+      <Position8>
+        <Filename Value="umain.pas"/>
+        <Caret Line="178" Column="16" TopLine="155"/>
+      </Position8>
+      <Position9>
+        <Filename Value="umain.pas"/>
+        <Caret Line="112" Column="16" TopLine="93"/>
+      </Position9>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

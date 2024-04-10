@@ -76,9 +76,9 @@ var
   FWMIService: olevariant;
   FWbemObjectSet: olevariant;
   FWbemObject: olevariant;
-  CeltFetched: ULONG;
   oEnum: ActiveX.IEnumvariant;
   FWbemQuery: string[250];
+  _Nil: longword;
 begin
   Result := -1;
   CoInitialize(nil);
@@ -88,11 +88,11 @@ begin
       'root\CIMV2', WbemUser, WbemPassword);
     FWbemQuery := Format(
       'Select * From Win32_PingStatus Where Address=%s And BufferSize=%d And TimeOut=%d',
-      [
-      QuotedStr(Address), BufferSize, Timeout]);
+      [QuotedStr(Address), BufferSize, Timeout]);
     FWbemObjectSet := FWMIService.ExecQuery(FWbemQuery, 'WQL', wbemFlagForwardOnly);
     oEnum := IUnknown(FWbemObjectSet._NewEnum) as IEnumVariant;
-    while oEnum.Next(1, FWbemObject, CeltFetched) = 0 do
+    _Nil := 0;
+    while oEnum.Next(1, FWbemObject, _Nil) = 0 do
     begin
       Result := longint(FWbemObject.Properties_.Item('StatusCode').Value);
       FWbemObject := Unassigned;
@@ -173,6 +173,7 @@ begin
       StatusBar1.Panels[0].Text := Format('%d active threads', [ActiveThreads]);
       StatusBar1.Panels[1].Text :=
         Format('%f seconds elapsed', [(GetTickCount - StartTime) / 1000]);
+      StatusBar1.Repaint;
       t.Id := i - 1;
       t.Buffer := seBuffer.Value;
       t.Timeout := seTimeout.Value;
@@ -185,7 +186,11 @@ begin
     end;
   end;
 
-  while ActiveThreads > 0 do ;
+  while ActiveThreads > 0 do
+    begin
+      Sleep(2);
+      Application.ProcessMessages;
+    end;
 
   StatusBar1.Panels[2].Text := 'done';
 end;
